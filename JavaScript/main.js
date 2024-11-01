@@ -1,5 +1,5 @@
 globalItems={};
-function loadScript(str)
+async function loadScript(src)
 {
 	
 }
