@@ -1,4 +1,5 @@
-function intType(src)
+function IntType(data)
 {
-	const 
+	this.type="int";
+	const items=data.split(" ");
 }
