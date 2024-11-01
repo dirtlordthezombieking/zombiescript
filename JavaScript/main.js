@@ -1,1 +1,5 @@
-//todo
+globalItems={};
+function loadScript(str)
+{
+	
+}
