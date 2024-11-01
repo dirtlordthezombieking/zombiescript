@@ -1,0 +1,44 @@
+USE graphics#
+USE rng#
+USE touch#
+USE input#
+pos [9 [2 (int @I0 0 8)]]#
+step int 0 0 2#
+can Canvas 144 160 {}
+	@setup F {}
+		graphics TileTexture "" 4 4#
+		grid TileGrid 9 10 2 0 0 1 1#
+	#
+	@draw F {}
+		grid.draw
+	#
+#
+_ TouchInput can {}
+	@down F x y {}
+		//
+	#
+	@up F x y life {}
+		//
+	#
+	@move oldX oldY newX newy life {}
+		//
+	#
+#
+_ Input can {}
+	@mouseDown F x y {}
+		//
+	#
+	@mouseUp F x y life {}
+		//
+	#
+	@mouseMove oldX oldY newX newy life {}
+		//
+	#
+	@keyDown F x y {}
+		//
+	#
+	@keyUp F x y life {}
+		//
+	#
+#
+	
