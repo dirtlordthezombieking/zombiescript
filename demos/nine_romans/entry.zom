@@ -8,6 +8,11 @@ can Canvas 144 160 {}
 	@setup F {}
 		graphics TileTexture "" 4 4#
 		grid TileGrid 9 10 2 0 0 1 1#
+		grid.fill 0 0 1 9 9 0
+		$loop pos item index {}
+			:y int 10 1 10
+			:y - :index
+			grid.set :item.0 :item.1 :y
 	#
 	@draw F {}
 		grid.draw
