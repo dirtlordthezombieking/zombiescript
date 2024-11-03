@@ -2,17 +2,21 @@ USE graphics#
 USE rng#
 USE touch#
 USE input#
-pos [9 [2 int @I0 0 8]]#
+pos [9 [2 int @~I 0 8]]#
 step int 0 0 2#
+set F {}
+	$loop pos item index {}
+		:y int 10 1 10
+		:y - :index
+		grid.set :item.0 :item.1 :y
+	#
+#
 can Canvas 144 160 {}
 	@setup F {}
 		graphics TileTexture "" 4 4#
 		grid TileGrid 9 10 2 0 0 1 1#
 		grid.fill 0 0 1 9 9 0
-		$loop pos item index {}
-			:y int 10 1 10
-			:y - :index
-			grid.set :item.0 :item.1 :y
+		-set#
 	#
 	@draw F {}
 		grid.draw
